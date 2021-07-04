@@ -3,7 +3,7 @@ import time
 import requests
 import json
 from PIL import Image, ImageFont, ImageDraw
-from datetime import date
+import datetime
 
 consumer_key = 'zrgz8HNXV5Ltyd2hhtQaz0cZn'
 consumer_secret = 'oXZ6lXqjf0MgTuc7dgggVOOWANNFZwnSd9cbh9qJfrsKyEaVDe'
@@ -30,7 +30,8 @@ def weather():
     draw.text((x, y), content, color, font=font)
 
     font = ImageFont.truetype('Inter.ttf', size=30)
-    content = date.today().strftime("%A - %B %d, %Y")
+    x = datetime.datetime.now()
+    content = x.strftime("%A - %B %d, %Y, %X")
     color = 'rgb(255, 255, 255)'
     (x, y) = (55,145)
     draw.text((x, y), content, color, font=font)
@@ -62,7 +63,7 @@ def weather():
 
     image.save("new.png")
 
-    tweet_text = "Weather Report After Every 4hrs (Automation)"
+    tweet_text = "Weather Report After Every 4hours (Automation)"
     image_path = "new.png"
     #Generate text tweet with media (image)
     status = api.update_with_media(image_path, tweet_text)
