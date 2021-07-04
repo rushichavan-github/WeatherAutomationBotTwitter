@@ -3,7 +3,7 @@ import time
 import requests
 import json
 from PIL import Image, ImageFont, ImageDraw
-import datetime
+from datetime import date
 
 consumer_key = 'zrgz8HNXV5Ltyd2hhtQaz0cZn'
 consumer_secret = 'oXZ6lXqjf0MgTuc7dgggVOOWANNFZwnSd9cbh9qJfrsKyEaVDe'
