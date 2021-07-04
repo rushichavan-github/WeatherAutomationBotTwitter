@@ -63,6 +63,7 @@ def weather():
 
     image.save("new.png")
 
+def tw():
     tweet_text = "Weather Report After Every 4hours (Automation)"
     image_path = "new.png"
     #Generate text tweet with media (image)
@@ -70,4 +71,6 @@ def weather():
 
 while True:
     weather()
+    time.sleep(30)
+    tw()
     time.sleep(14400)
