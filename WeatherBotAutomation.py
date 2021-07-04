@@ -30,8 +30,7 @@ def weather():
     draw.text((x, y), content, color, font=font)
 
     font = ImageFont.truetype('Inter.ttf', size=30)
-    x = datetime.datetime.now()
-    content = x.strftime("%A - %B %d, %Y, %X")
+    content = date.today().strftime("%A - %B %d, %Y")
     color = 'rgb(255, 255, 255)'
     (x, y) = (55,145)
     draw.text((x, y), content, color, font=font)
